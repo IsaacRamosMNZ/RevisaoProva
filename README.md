@@ -17,14 +17,12 @@
     System.out.println("Resultado da soma dos vetores:");
     imprimirVetor(vetorSoma);
 }
-
 // Método para preencher um vetor com valores fornecidos pelo usuário
 public static void preencherVetor(Scanner scanner, int[] vetor) {
     for (int i = 0; i < vetor.length; i++) {
         vetor[i] = scanner.nextInt();
     }
 }
-
 // Método para imprimir um vetor
 public static void imprimirVetor(int[] vetor) {
     for (int i = 0; i < vetor.length; i++) {
@@ -33,6 +31,7 @@ public static void imprimirVetor(int[] vetor) {
     System.out.println();
 }
 
+
 3)public class MediaDoVetor {
 
 public static void main(String[] args) {
@@ -40,7 +39,6 @@ public static void main(String[] args) {
     double media = calcularMedia(vetor); // Chamada do método que calcula a média
     imprimirMedia(media); // Imprime a média calculada
 }
-
 // Método para calcular a média dos elementos do vetor
 public static double calcularMedia(int[] vetor) {
     double soma = 0;
@@ -55,6 +53,7 @@ public static void imprimirMedia(double media) {
     System.out.println("A média dos elementos do vetor é: " + media);
 }
 
+
 4:Cópia de Vetor int[] vetorOriginal = {10, 20, 30, 40, 50}; // Vetor original int[] vetorCopia = copiarVetor(vetorOriginal); // Chamada do método que copia o vetor imprimirVetor(vetorCopia); // Imprime o vetor copiado }
 
 // Método para copiar um vetor
@@ -65,7 +64,6 @@ public static int[] copiarVetor(int[] vetorOriginal) {
     }
     return vetorCopia; // Retorna o novo vetor copiado
 }
-
 // Método para imprimir o vetor
 public static void imprimirVetor(int[] vetor) {
     System.out.print("Vetor copiado: ");
@@ -75,15 +73,14 @@ public static void imprimirVetor(int[] vetor) {
     System.out.println();
 }
 
+
 5:Verificar Igualdade de Vetores: int[] vetor1 = {4, 5, 6, 7, 8}; int[] vetor2 = {4, 5, 6, 7, 8}; int[] vetor3 = {8, 7, 6, 5, 4};
 
     boolean saoIguais1 = saoVetoresIguais(vetor1, vetor2); // Deve retornar true
     boolean saoIguais2 = saoVetoresIguais(vetor1, vetor3); // Deve retornar false
-
     imprimirResultado(saoIguais1, "vetor1", "vetor2");
     imprimirResultado(saoIguais2, "vetor1", "vetor3");
 }
-
 // Método que verifica se dois vetores são iguais
 public static boolean saoVetoresIguais(int[] vetor1, int[] vetor2) {
     if (vetor1.length != vetor2.length) {
@@ -96,7 +93,6 @@ public static boolean saoVetoresIguais(int[] vetor1, int[] vetor2) {
     }
     return true; // Todos os elementos e tamanhos são iguais
 }
-
 // Método para imprimir o resultado da comparação
 public static void imprimirResultado(boolean resultado, String nomeVetor1, String nomeVetor2) {
     if (resultado) {
@@ -106,15 +102,15 @@ public static void imprimirResultado(boolean resultado, String nomeVetor1, Strin
     }
 }
 
+
 6.
 int[] vetor = {1, 2, 3, 4, 5, 6};  // Exemplo de vetor
  inverterVetor(vetor);  // Chama o método que inverte o vetor
  imprimirVetor(vetor);  // Imprime o vetor invertido
 }
-
 // Método para inverter o vetor public static void inverterVetor(int[] vetor) { int n = vetor.length; for (int i = 0; i < n / 2; i++) { int temp = vetor[i]; vetor[i] = vetor[n - 1 - i]; vetor[n - 1 - i] = temp; } }
-
 // Método para imprimir o vetor public static void imprimirVetor(int[] vetor) { System.out.print("Vetor invertido: "); for (int valor : vetor) { System.out.print(valor + " "); } System.out.println(); } }
+
 
 7)Contagem de Elementos Pares e Ímpares: Escreva um programa que conte e imprima a quantidade de elementos pares e ímpares em um vetor de inteiros.
 
@@ -122,13 +118,10 @@ int[] vetor = {1, 2, 3, 4, 5, 6};  // Exemplo de vetor
     int[] resultado = contarParesEImpares(vetor); // Chamada do método que realiza a contagem
     imprimirResultado(resultado); // Método para imprimir os resultados
 }
-
 // Método para contar pares e ímpares
-
 public static int[] contarParesEImpares(int[] vetor) {
     int contPares = 0;
     int contImpares = 0;
-
     for (int numero : vetor) { // Laço para percorrer todos os elementos do vetor
         if (numero % 2 == 0) { // Condição para verificar se o número é par
             contPares++;
@@ -144,23 +137,21 @@ public static void imprimirResultado(int[] resultado) {
     System.out.println("Quantidade de números ímpares: " + resultado[1]);
 }
 
+
 8)nt[] vetorOriginal = {2, 3, 5, 6, 8, 9, 10, 12}; // Exemplo de vetor int elementoParaRemover = 6; // Elemento a ser removido
 
     int[] vetorModificado = removerElemento(vetorOriginal, elementoParaRemover);
     imprimirVetor(vetorModificado);
 }
-
 // Método para remover um elemento específico do vetor
 public static int[] removerElemento(int[] vetor, int elemento) {
     int quantidade = 0;
-
     // Contar quantas vezes o elemento aparece no vetor
     for (int valor : vetor) {
         if (valor == elemento) {
             quantidade++;
         }
     }
-
     // Criar um novo vetor sem o elemento
     int[] novoVetor = new int[vetor.length - quantidade];
     int indice = 0;
@@ -173,7 +164,6 @@ public static int[] removerElemento(int[] vetor, int elemento) {
 
     return novoVetor;
 }
-
 // Método para imprimir o vetor
 public static void imprimirVetor(int[] vetor) {
     System.out.print("Vetor modificado: [");
@@ -186,6 +176,7 @@ public static void imprimirVetor(int[] vetor) {
     System.out.println("]");
 }
 }
+
 
 9.
 int[] vetor = {34, 7, 23, 32, 5, 62}; // Exemplo de vetor ordenarVetor(vetor); // Chama o método que ordena o vetor imprimirVetor(vetor); // Imprime o vetor ordenado }
@@ -203,7 +194,6 @@ public static void ordenarVetor(int[] vetor) {
         }
     }
 }
-
 // Método para imprimir o vetor
 public static void imprimirVetor(int[] vetor) {
     System.out.print("Vetor ordenado: ");
@@ -212,6 +202,7 @@ public static void imprimirVetor(int[] vetor) {
     }
     System.out.println();
 }
+
 
 10.
 int[] vetor = {45, 22, 89, 30, 17, 56, 93}; // Vetor onde será feita a busca int elementoProcurado = 30; // Elemento a ser procurado no vetor
@@ -227,7 +218,6 @@ public static int buscaSequencial(int[] vetor, int elemento) {
     }
     return -1; // Retorna -1 se o elemento não foi encontrado
 }
-
 // Método para imprimir o resultado da busca
 public static void imprimirResultado(int indice, int elemento) {
     if (indice == -1) {
